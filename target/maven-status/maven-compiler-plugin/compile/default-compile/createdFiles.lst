@@ -1,0 +1,5 @@
+com\foodies\form\ReservationForm.class
+com\foodies\ServletInitializer.class
+com\foodies\FoodiesApplication.class
+com\foodies\ReservationDto.class
+com\foodies\controller\ReservationController.class

@@ -41,15 +41,13 @@ pipeline {
                 sh '''
                     sudo apt update -y
                     sudo apt install -y openjdk-11-jdk
-                    COUNT=$(grep tomcat /etc/passwd | wc -l)
-                   
+                    COUNT=$(grep tomcat /etc/passwd | wc -l)                   
                     if [ $COUNT -eq 0 ]
                     then
                         sudo useradd -m -s /bin/bash tomcat
                         sudo mkdir -p /u01/middleware
-                        sudo chown -R tomcat:tomcat /u01
-                    fi
-                    
+                        sudo chown -R tomcat:tomcat /u01/middleware
+                    fi                    
                     #dowload and extract the tomcat server
                     if [ ! -d "${TOMCAT_HOME_DIR}" ] 
                     then
@@ -66,9 +64,7 @@ pipeline {
                         sudo systemctl enable tomcat
                         sudo systemctl start tomcat
                     fi
-
                     echo "***************** INSTALLED ****************"
-                    
                 '''
             }
         }

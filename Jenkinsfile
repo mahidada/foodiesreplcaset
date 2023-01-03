@@ -18,7 +18,7 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
-                git url:"https://${FOODIES_GIT_PAT}@github.com/techsriman/foodies.git"
+                git url:"https://${FOODIES_GIT_PAT}@github.com/mahidada/foodie.git"
             }
         }
         stage('test') {

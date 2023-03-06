@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: foodies
-        image: techmahi/foodiesreplicaset:1.0
+        image: techmahi/foodiesreplicaset:3.0
         ports:
         - name: tomcatport
           containerPort: 8080

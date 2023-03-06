@@ -10,7 +10,6 @@ spec:
     matchLabels:
       app: foodies
       version: "1.0"
-
 template:
   metadata:
     labels:
